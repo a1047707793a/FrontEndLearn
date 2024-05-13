@@ -1,44 +1,72 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="" xmlns="">
+<html lang="zh">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-        <style>
-        .center {
-            text-align: center;
-        }</style>
+    <title>test</title>
+    <!-- 导入对象.js脚本 -->
+    <script src="js/对象.js"></script>
 </head>
 <body>
-
-    <div class="center">
-        <em  style="color: darkgreen;font-size: 20px;font-weight: bolder">
-        a和b的值为20,c已声明但是未初始化
+    <!-- 第一个段落 -->
+    <div>
+        <em style="font-size: 20px;font-weight: bolder">
+            1. 变量的用法，a 和 b 的值为 20，c 已声明但是未初始化
         </em>
     </div>
-
     <br>
 
+    <!-- 导入变量.js脚本 -->
     <div>
         <script src="js/变量.js"></script>
     </div>
-
     <br>
 
-    <div style="color: darkgreen;font-size: 15px;font-weight: bolder">
-            *js的流程控制语句还有:if...else/switch/for/while/do...while,用法和java一样
-    </div><br>
+    <!-- 文字说明 -->
+    <div style="font-size: 15px;font-weight: bolder">
+        * JavaScript 的流程控制语句还有：if...else、switch、for、while、do...while，用法和 Java 一样
+    </div>
+    <br><br><br>
 
-    <div style="color: darkgreen;font-size: 15px;font-weight: bolder">
-        *函数的用法,这里返回a+b的值
+    <!-- 第二个段落，包含函数用法 -->
+    <div>
+        <div>
+            <em style="font-size: 20px;font-weight: bolder">
+                2. 函数的用法，这里返回 a + b 的值
+            </em>
+        </div>
+        <div>
+            <label for="a">请输入 a 的值：</label>
+            <input id="a" type="number" style="width: 80px">
+            <!-- 这里添加标签是想让用户点击标签时光标自动跳转到输入框 -->
+            +
+            <label for="b">请输入 b 的值：</label>
+            <input id="b" type="number" style="width: 80px">
+            <button id="submit">计算</button>
+            <!-- 导入函数.js脚本 -->
+            <script src="js/函数.js"></script>
+        </div>
+        <div id="calculate_result"></div>
+        <br><br><br>
     </div>
 
+    <!-- 第三个段落，包含数组用法 -->
     <div>
-        <label for="a">请输入a的值:</label><input id="a" type="number" style="width: 80px">
-<!--        这里添加标签是想让用户点击标签时光标自动跳转到输入框-->
-        +
-        <label for="b">请输入b的值:</label><input id="b" type="number" style="width: 80px">
-        <button id="submit">计算</button>
-        <script src="js/函数.js"></script>
+        <div>
+            <em style="font-size: 20px;font-weight: bolder">
+                3. 数组的用法，这里声明了一个数组 arr，并输出数组的第 1 个元素 arr[1]<br>
+            </em>
+            <div style="border: 1px red inset;">
+                JavaScript 中数组和 Java 中的集合类似，可以存储多个元素，数组的元素可以是任意类型的数据，数组的长度是可变的
+            </div>
+        </div>
+        <br>
+        <div>
+            <button id="travel_Arr">遍历数组</button>
+            <button id="alter_arr">修改元素</button>
+        </div>
+        <div id="arr"></div>
     </div>
 </body>
+<!-- 导入对象.js脚本 -->
+<script src="js/对象.js"></script>
 </html>

@@ -6,13 +6,12 @@ class calculate{
     }
 
     static show(result){
-        let resultDiv = document.createElement("div");//新建一个div元素
+        let resultDiv = document.getElementById("calculate_result");//新建一个div元素
         resultDiv.innerHTML = "Done,the result is :<br>"+result;//对这个元素的功能进行建立
-        document.body.appendChild(resultDiv);//将这个元素加入到HTML中
         //
     }
 }
-// 为 'submit' 元素添加 'click' 事件监听
+// 为 'submit' 元素添加 'click' 事件监听,当点击按钮时执行函数
 document.getElementById('submit').addEventListener('click', function ()
 {
     // 获取 id 为 'a' 的 HTML 元素的值，并赋值给变量 a
@@ -23,6 +22,14 @@ document.getElementById('submit').addEventListener('click', function ()
     calculate.show(calculate.add(a, b))
 });
 
+//声明函数的几种方式
+function add(a, b) {
+    return a + b;
+}//这是最常用的声明函数的方式
+
+var functionNmae =function (a, b) {
+    return a + b;
+}//这是声明匿名函数的方式
 
 
 
