@@ -1,18 +1,21 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="" xmlns="">
+<html lang="zh" xmlns="" xmlns="">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>test</title>
         <style>
         .center {
             text-align: center;
         }</style>
+    <script src="js/对象.js"></script>
 </head>
+<script src="js/对象.js"></script>
+
 <body>
 
-    <div class="center">
-        <em  style="color: darkgreen;font-size: 20px;font-weight: bolder">
-        a和b的值为20,c已声明但是未初始化
+    <div>
+        <em  style="font-size: 20px;font-weight: bolder">
+        1,变量的用法，a和b的值为20,c已声明但是未初始化
         </em>
     </div>
 
@@ -24,21 +27,43 @@
 
     <br>
 
-    <div style="color: darkgreen;font-size: 15px;font-weight: bolder">
+    <div style="font-size: 15px;font-weight: bolder">
             *js的流程控制语句还有:if...else/switch/for/while/do...while,用法和java一样
-    </div><br>
-
-    <div style="color: darkgreen;font-size: 15px;font-weight: bolder">
-        *函数的用法,这里返回a+b的值
-    </div>
+    </div><br><br><br>
 
     <div>
-        <label for="a">请输入a的值:</label><input id="a" type="number" style="width: 80px">
-<!--        这里添加标签是想让用户点击标签时光标自动跳转到输入框-->
-        +
-        <label for="b">请输入b的值:</label><input id="b" type="number" style="width: 80px">
-        <button id="submit">计算</button>
-        <script src="js/函数.js"></script>
+        <div>
+            <em  style="font-size: 20px;font-weight: bolder">
+            2.函数的用法,这里返回a+b的值
+            </em>
+        </div>
+        <div>
+            <label for="a">请输入a的值:</label><input id="a" type="number" style="width: 80px">
+        <!--        这里添加标签是想让用户点击标签时光标自动跳转到输入框-->
+            +
+            <label for="b">请输入b的值:</label><input id="b" type="number" style="width: 80px">
+            <button id="submit">计算</button>
+            <script src="js/函数.js"></script>
+        </div>
+        <div id="calculate_result"></div>
+        <br><br><br>
+    </div>
+
+
+    <div>
+       <div>
+            <em  style="font-size: 20px;font-weight: bolder">
+            3.数组的用法，这里声明了一个数组arr，并输出数组的第1个元素arr[1]<br>
+            </em>
+            <div style="border: 1px red inset;">
+                javascript中数组和java中的集合类似，可以存储多个元素，数组的元素可以是任意类型的数据，数组的长度是可变的
+            </div>
+        </div><br>
+        <div>
+            <button id="travel_Arr">遍历数组</button>
+            <button id="alter_arr">修改元素</button>
+        </div>
+        <div id="arr"></div>
     </div>
 </body>
 </html>
