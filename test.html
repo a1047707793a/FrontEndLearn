@@ -2,106 +2,16 @@
 <html lang="zh">
 <head>
     <meta charset="UTF-8">
-    <title>test</title>
-    <!-- 导入对象.js脚本 -->
-    <script src="js/对象.js"></script>
+    <title>Title</title>
 </head>
 <body>
-    <!-- 第一个段落 -->
-    <div>
-        <em style="font-size: 20px;font-weight: bolder">
-            1. 变量的用法，a 和 b 的值为 20，c 已声明但是未初始化
-        </em>
-    </div>
-    <br>
+    <script>
+        function struct(){
+            var flag = confirm("123?");
+            return flag;
+        }
 
-    <!-- 导入变量.js脚本 -->
-    <div>
-        <script src="js/变量.js"></script>
-    </div>
-    <br>
-
-    <!-- 文字说明 -->
-    <div style="font-size: 15px;font-weight: bolder">
-        * JavaScript 的流程控制语句还有：if...else、switch、for、while、do...while，用法和 Java 一样
-    </div>
-    <br><br><br>
-
-    <!-- 第二个段落，包含函数用法 -->
-    <div>
-        <div>
-            <em style="font-size: 20px;font-weight: bolder">
-                2. 函数的用法，这里返回 a + b 的值
-            </em>
-        </div>
-        <div>
-            <label for="a">请输入 a 的值：</label>
-            <input id="a" type="number" style="width: 80px">
-            <!-- 这里添加标签是想让用户点击标签时光标自动跳转到输入框 -->
-            +
-            <label for="b">请输入 b 的值：</label>
-            <input id="b" type="number" style="width: 80px">
-            <button id="submit">计算</button>
-            <!-- 导入函数.js脚本 -->
-            <script src="js/函数.js"></script>
-        </div>
-        <div id="calculate_result"></div>
-        <br><br><br>
-    </div>
-
-    <!-- 第三个段落，包含数组用法 -->
-    <div>
-        <div>
-            <em style="font-size: 20px;font-weight: bolder">
-                3. 数组的用法，这里声明了一个数组 arr，并输出数组的第 1 个元素 arr[1]<br>
-            </em>
-            <div style="border: 1px red inset;">
-                JavaScript 中数组和 Java 中的集合类似，可以存储多个元素，数组的元素可以是任意类型的数据，数组的长度是可变的
-            </div>
-        </div>
-        <br>
-        <div>
-            <button id="travel_Arr">遍历数组</button>
-            <button id="alter_arr">修改元素</button>
-        </div>
-        <div id="arr"></div>
-    </div>
-
-    <div><!--第四个段落 包含string用法-->
-        <div>
-            <em style="font-size: 20px;font-weight: bolder">
-                4. 字符串的用法，这里声明了一个字符串a<br>
-            </em>
-        </div>
-        <br>
-        <div>
-            <label for="inputStr">请输入字符串<input id="inputStr" style="width: 80px"></label>
-            <button id="inputButton">输入完成</button><br>
-            <div id="myStr"></div><br>
-        </div>
-
-        <div>
-            <label for="chaAtNum">请输入指定位置<input id="chaAtNum" style="width: 80px"></label>
-            <button id="charAt_confirm">返回指定位置的字符</button><br>
-            <div id="myCharAt"></div><br><br>
-
-
-            <label for="indexOf_substr">请输入想要检索的字符串<input id="indexOf_substr" style="width: 80px"></label>
-            <label for="indexOf_num">请输入想要检索的字符串起始位置<input id="indexOf_num" style="width: 80px"></label><br>
-            <button id="indexOfButton">检索字符串</button><br>
-            <div id="myIndexOf"></div><br><br>
-
-            <button id="trimButton">去除空格</button><br>
-            <div id="myTrim"></div><br><br>
-
-            <label for="substring_start">请输入想要求子串的起始位置<input id="substring_start" style="width: 80px"></label><br>
-            <label for="substring_end">请输入想要求子串的终止位置<input id="substring_end" style="width: 80px"></label><br>
-            <button id="substringButton">求子串</button><br>
-            <div id="mySubstring"></div><br><br>
-        </div>
-        <div id="str"></div>
-    </div>
+        if(struct()){location.href="project.html"};
+    </script>
 </body>
-<!-- 导入对象.js脚本 -->
-<script src="js/对象.js"></script>
 </html>
