@@ -1,17 +1,32 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
-<body>
-    <script>
-        function struct(){
-            var flag = confirm("123?");
-            return flag;
-        }
+<body onload = "load()"
+      onkeydown="alert('键盘按下事件')"
+      onkeyup="alert('键盘松开事件')"
+>
+    <button onclick="alert('hello')">click me</button>
+    <button id="123">click me 2</button>
+    <button onclick="alert('单击事件')">click</button>
+    <button ondblclick="alert('双击事件')">double click</button>
+    <button onmousedown="alert('鼠标按下事件')">mouse down</button>
+    <button onmouseup="alert('鼠标松开事件')">mouse up</button>
 
-        if(struct()){location.href="project.html"};
-    </script>
+
+
 </body>
+<script>
+
+    function load(){
+        alert('load')
+    }
+
+    document.getElementById('123').onclick = function(){
+        alert('hello')
+        return true;
+    };
+</script>
 </html>

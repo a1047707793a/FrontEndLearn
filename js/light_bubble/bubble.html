@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /* 定义一个类，设置字体大小和粗细 */
+        .cls{
+            font-size: 20px;
+            font-weight: bolder;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        /* 定义一个函数，弹出一个确认对话框，返回用户的选择 */
+        function struct(){
+            return confirm("123?");
+        }
+
+        /* 如果用户确认，跳转到project.html页面 */
+        if(struct()){location.href="../../project.html"}
+    </script>
+
+    <!-- 显示一个图片，初始为off.png -->
+    <img id="h1" src = "off.png" alt="灯泡"><br><br>
+    <!-- 显示两个div元素，类名为cls -->
+    <div class="cls">传智教育</div>
+    <div class="cls">黑马程序员</div>
+    <!-- 显示三个复选框，名字为hobby和123 -->
+    <label>
+        <input type="checkbox" name="hobby">
+        电影
+    </label>
+    <label>
+        <input type="checkbox" name="hobby">
+        音乐
+    </label>
+    <label>
+        <input type="checkbox" name="123">
+        美食
+    </label>
+
+    <script>
+        /* 当文档加载完成后，执行以下代码 */
+        document.addEventListener("DOMContentLoaded",function(){
+            /* 获取名为hobby的复选框 */
+            const hobbys = document.getElementsByName("hobby");
+            /* 定义一个标志变量 */
+            let flag = 0;
+            /* 遍历复选框 */
+            for (let i= 0; i<hobbys.length; i++){
+                /* 为每个复选框添加点击事件监听器 */
+                hobbys[i].addEventListener("click",function(){
+                    /* 获取id为h1的图片 */
+                    let img = document.getElementById("h1");
+                    /* 获取所有div元素 */
+                    let divs = document.getElementsByTagName("div");
+                    /* 如果标志为0，图片源为off.png
+                    getElementsByTagName 返回的是一个列表而不是一个元素值
+                    */
+                    if(flag===0){img.src = "off.png"}
+                    /* 如果复选框被选中 */
+                    if(this.checked){
+                        /*
+                        标志加1，图片源为on.png，所有div元素的颜色变为红色
+                        checked表示复选框是否被选中，如果被选中，返回true，否则返回false
+                        */
+                        flag ++;
+                        img.src = "on.png";
+                        for (let i = 0; i<divs.length; i++){
+                            divs[i].style.color = "red";
+                            }
+                        }
+                    else
+                        {
+                        /* 如果复选框被取消选中，且标志减1后为0，图片源为off.png，所有div元素的颜色变为黑色 */
+                        if(flag-1===0) {
+                            img.src = "off.png";
+                            for (let i = 0; i < divs.length; i++) {
+                                divs[i].style.color = "black";}
+                                flag--;
+                            }
+                        else
+                            {
+                                /* 否则，标志减1 */
+                                flag--
+                            }
+                        }
+
+                    })
+                }
+
+            })
+
+    </script>
+</body>
+</html>

@@ -299,7 +299,7 @@ document.addEventListener("DOMContentLoaded",function (){
 
 //location:地址栏对象
 //属性:
-//  设置或返回完整的URL使得页面直接跳到href中的网址: location.href="project.html"
+//  设置或返回完整的URL使得页面直接跳到href(超链接)中的网址: location.href="project.html"
 //------------------------------------DOM对象-----------------------------------------
 //定义:文档对象模型
 //将标记语言的各个组成部分封装为对应的对象:
@@ -314,3 +314,21 @@ document.addEventListener("DOMContentLoaded",function (){
 //  var h1 = document.getElementsByTagName('Id')  --- 根据标签名称获取
 //  var h1 = document.getElementsByName('Id')  --- 根据name属性值获取
 //  var h1 = document.getElementByClassName('Id')    --- 根据class属性值获取
+
+// 事件监听器:
+//  1.事件监听器的绑定方式:
+//      1.1 HTML中绑定(通过标签中的事件属性): <button onclick="alert('hello')">click me</button>  -- onclick是事件监听器,表示绑定click中的on方法
+//      1.2 JS中绑定(通过dom元素): document.getElementById('button').onclick = function(){alert('hello')}
+//          注意:两种事件绑定的行为都是函数,可以在body中先引用,然后再定义函数
+//      1.3 事件监听器的绑定(通过addEventListener): document.getElementById('button').addEventListener('click',function(){alert('hello')})
+//  2.常见事件:
+//      onclick ---  单击事件
+//      ondbclick --- 双击事件
+//      onmouseover --- 鼠标移入事件
+//      onmouseout --- 鼠标移出事件
+//      onfocus --- 获得焦点事件
+//      onblur --- 失去焦点事件
+//      onkeydown --- 按下键盘事件
+//      onkeyup --- 松开键盘事件
+//      onsubmit --- 提交事件
+//      onload --- 加载事件
