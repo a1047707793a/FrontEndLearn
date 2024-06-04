@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+</head>
+
+<body>
+
+    <div id="app">
+
+        <table border="1" cellspacing="0" width="60%">
+            <tr>
+                <th>编号</th>
+                <th>姓名</th>
+                <th>年龄</th>
+                <th>性别</th>
+                <th>成绩</th>
+                <th>等级</th>
+            </tr>
+            <tr align="center" v-for="(user,index) in users">
+                <td>{{index}}</td>
+                <td>{{ user.name }}</td>
+                <td>{{ user.age }}</td>
+                <td>
+                    <span v-show="Number(user.gender)===0">女</span>
+                    <span v-show="Number(user.gender==1)">男</span>
+                </td>
+                <td>{{ user.score }}</td>
+                <td>
+                    <span v-show="user.score>=85">优秀</span>
+                    <span v-show="user.score>=75&&user.score<85">良好</span>
+                    <span v-show="user.score>=60&&user.score<75">及格</span>
+                    <span style="color:red" v-show="user.score<60" >不及格</span>
+                </td>
+            </tr>
+        </table>
+        <input id="name">
+        <input id="age">
+        <input id="gender">
+        <input id="score">
+        <button @click="arrAdd">添加</button>
+        <button @click="arrDelete">删除</button>
+    </div>
+
+
+</body>
+<script src="制作动态列表.js"></script>
+
+</html>

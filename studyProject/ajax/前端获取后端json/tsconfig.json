@@ -1,0 +1,12 @@
+{
+  "data": [{
+    "name": "LZW",
+    "age": 20,
+    "gender": 1,
+    "hobby": ["coding", "reading", "music"]},
+    { "name": "LZW2",
+    "age": 21,
+    "gender": 0,
+    "hobby": ["coding", "reading", "music"]}
+  ]
+}

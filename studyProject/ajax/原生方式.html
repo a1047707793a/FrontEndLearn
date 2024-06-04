@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <input type="button" value="获取数据" onclick="getData()">
+    <div id="div1"></div>
+
+</body>
+
+    <script>
+        //原生方式比较繁琐,现在一般使用Axios
+        function getData(){
+            //1.创建XMLHttpRequest
+            var xhr = new XMLHttpRequest();
+
+            //2.发送异步请求
+            xhr.open('GET','https://s1.hdslb.com/bfs/seed/jinkela/short/b-mirror/biliMirror.umd.mini.js');
+            xhr.send();//发送请求
+
+            //3.获取服务响应数据
+            xhr.onreadystatechange = function(){
+                if(xhr.readyState == 4 && xhr.status == 200){
+                    document.getElementById('div1').innerHTML = xhr.responseText;
+                }
+            }
+        }
+    </script>
+</html>

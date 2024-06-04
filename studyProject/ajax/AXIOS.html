@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <div>
+        <button onclick="Get()" value="获取数据" >获取</button>
+        <button onclick="Post()" value="删除数据">删除</button>
+    </div>
+    <div id="div1"></div>
+
+</body>
+    <script>
+        function Get(){
+            //通过axios发送异步请求-get的第一种方式:通过对象配置
+            // axios({
+            //     methord: "get",
+            //     url: "https://s1.hdslb.com/bfs/seed/jinkela/short/b-mirror/biliMirror.umd.mini.js"
+            //     }).then(result => {
+            //         document.getElementById('div1').innerHTML = result.data
+            // })
+
+            //第二种方式:通过简单配置
+            axios.get("package.json").then(result =>{
+                document.getElementById('div1').innerHTML = result.data.name
+            })
+        }
+        function Post(){
+            //通过axios发送异步请求-post的第一种方式:通过对象配置
+            // axios({
+            //     methord:"post",
+            //     url:"https://data.bilibili.com/log/web?0000171717483178174https%3A%2F%2Fwww.bilibili.com%2Fvideo%2FBV1S34y1K7uV%2F%3Fspm_id_from%3D333.337.search-card.all.click%26vd_source%3Db6e04a73dc34d73fee7dd359d109eb86|333.788.top_middle_bar_search.content.click||1717483178174|||1365x919|1|{%22type%22:%225%22,%22Input_content%22:%22123%22,%22search_content%22:%22123%22,%22b_nut_h%22:1709377200,%22lsid%22:%227114BED6_18FE1B40D95%22,%22buvid_fp%22:%2202efa914091f77c3379df2c2fde250c4%22,%22buvid4%22:%2201719AD2-9D88-0246-DEC7-EE3A90FF7E1B75798-024030211-iRsWFM0GxdG36uVgthOpnQ%3D%3D%22,%22bsource_origin%22:%22empty%22,%22share_source_origin%22:%22empty%22}|{%22login_dialog_version%22:%22V_PLAYER_PLAY_TOAST%22,%22call_pc_app%22:%22FORBID%22,%22for_ai_home_version%22:%22V_OTHER%22,%22ai_summary_version%22:%22SHOW%22,%22bmg_fallback_version%22:%22DEFAULT%22,%22rcmd_tab_version%22:%22DISABLE%22,%22in_new_ab%22:true,%22ab_version%22:{%22login_dialog_version%22:%22V_PLAYER_PLAY_TOAST%22,%22call_pc_app%22:%22FORBID%22,%22for_ai_home_version%22:%22V_OTHER%22,%22ai_summary_version%22:%22SHOW%22,%22bmg_fallback_version%22:%22DEFAULT%22,%22rcmd_tab_version%22:%22DISABLE%22},%22ab_split_num%22:{%22login_dialog_version%22:3,%22call_pc_app%22:85,%22for_ai_home_version%22:78,%22ai_summary_version%22:299,%22bmg_fallback_version%22:92,%22rcmd_tab_version%22:47},%22pageVersion%22:%22new_video%22,%22videoGoOldVersion%22:-1}|https%3A%2F%2Fsearch.bilibili.com%2Fall%3Fkeyword%3D%25E7%25B4%25A0%25E9%25A2%259C%26from_source%3Dwebtop_search%26spm_id_from%3D333.1007%26search_source%3D5|329E10635-210E9-5ABD-7312-91106318B57FD69854infoc|zh-CN|null|1"
+            // }).then(result =>{
+            //     document.getElementById('div1').innerHTML = result.data
+            // })
+
+            //第二种方式:通过简单配置
+            axios.post("https://data.bilibili.com/log/web?0000171717483178174https%3A%2F%2Fwww.bilibili.com%2Fvideo%2FBV1S34y1K7uV%2F%3Fspm_id_from%3D333.337.search-card.all.click%26vd_source%3Db6e04a73dc34d73fee7dd359d109eb86|333.788.top_middle_bar_search.content.click||1717483178174|||1365x919|1|{%22type%22:%225%22,%22Input_content%22:%22123%22,%22search_content%22:%22123%22,%22b_nut_h%22:1709377200,%22lsid%22:%227114BED6_18FE1B40D95%22,%22buvid_fp%22:%2202efa914091f77c3379df2c2fde250c4%22,%22buvid4%22:%2201719AD2-9D88-0246-DEC7-EE3A90FF7E1B75798-024030211-iRsWFM0GxdG36uVgthOpnQ%3D%3D%22,%22bsource_origin%22:%22empty%22,%22share_source_origin%22:%22empty%22}|{%22login_dialog_version%22:%22V_PLAYER_PLAY_TOAST%22,%22call_pc_app%22:%22FORBID%22,%22for_ai_home_version%22:%22V_OTHER%22,%22ai_summary_version%22:%22SHOW%22,%22bmg_fallback_version%22:%22DEFAULT%22,%22rcmd_tab_version%22:%22DISABLE%22,%22in_new_ab%22:true,%22ab_version%22:{%22login_dialog_version%22:%22V_PLAYER_PLAY_TOAST%22,%22call_pc_app%22:%22FORBID%22,%22for_ai_home_version%22:%22V_OTHER%22,%22ai_summary_version%22:%22SHOW%22,%22bmg_fallback_version%22:%22DEFAULT%22,%22rcmd_tab_version%22:%22DISABLE%22},%22ab_split_num%22:{%22login_dialog_version%22:3,%22call_pc_app%22:85,%22for_ai_home_version%22:78,%22ai_summary_version%22:299,%22bmg_fallback_version%22:92,%22rcmd_tab_version%22:47},%22pageVersion%22:%22new_video%22,%22videoGoOldVersion%22:-1}|https%3A%2F%2Fsearch.bilibili.com%2Fall%3Fkeyword%3D%25E7%25B4%25A0%25E9%25A2%259C%26from_source%3Dwebtop_search%26spm_id_from%3D333.1007%26search_source%3D5|329E10635-210E9-5ABD-7312-91106318B57FD69854infoc|zh-CN|null|1"
+            ).then(result =>{
+                document.getElementById('div1').innerHTML = result.data
+            })
+        }
+    </script>
+</html>

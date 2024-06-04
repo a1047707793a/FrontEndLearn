@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table{
+            width: 100%;
+            border-collapse: collapse;
+        }
+        td{
+            border: 1px solid black;
+            text-align: center;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+
+    <table id="app">
+        <tr>
+            <td>id</td>
+            <td>name</td>
+            <td>gender</td>
+            <td>age</td>
+            <td>hobby</td>
+            <td>updatetime</td>
+        </tr>
+        <tr v-for="(item,index) in temp">
+            <td>{{ index+1 }}</td>
+            <td>{{item.name}}</td>
+            <td>
+                <span v-show="item.gender==0">女</span>
+                <span v-show="item.gender==1">男</span>
+            </td>
+            <td>{{item.age}}</td>
+            <td>{{formatHobby(item.hobby)}}</td>
+            <td>{{renderTime()}}</td>
+        </tr>
+    </table>
+
+</body>
+    <script src="Vue.js"></script>
+</html>
