@@ -1,14 +1,25 @@
-<template>
+<template>  <!--定义HTML模板 -->
   <div id="app">
     <nav>
       <router-link to="/">vue Home</router-link> |
       <router-link to="/about">About</router-link>
     </nav>
     <router-view/>
+    <h1>{{message}}</h1>
   </div>
 </template>
 
-<style>
+<script>
+  export default {
+    data(){
+      return{
+        message:"Hello vue"
+      }
+    }
+  }
+</script>
+
+<style>  /*定义CSS样式*/
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
