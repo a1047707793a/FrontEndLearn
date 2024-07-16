@@ -18,15 +18,16 @@ export default {
       },
     },
   mounted() {
-    axios.get("https://yapi.pro/mock/450515/userGetByID").then((result)=>{
-      this.tabledata=result.data.data
+    axios.get("https://yapi.pro/mock/450515/depView").then((result)=>{
+      this.tableData=result.data.data
+      //  document.getElementById('div1').innerHTML = result.data.data.name
     })
   }
 }
 </script>
 
 <template>
-  <div>
+  <div id="div1">
     <el-container style="height:500px;border:1px solid #eee">
 <!--     标题-->
       <el-header style="font-size: 40px; background-color: rgb(238, 241, 246);font-family: 'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', '微软雅黑', Arial, sans-serif; ">
@@ -42,8 +43,12 @@ export default {
             <el-submenu index="1">
               <template slot="title"><i class="el-icon-message"></i>系统信息管理</template>
               <el-menu-item-group>
-                <el-menu-item index="1-1">部门管理</el-menu-item>
-                <el-menu-item index="1-2">员工管理</el-menu-item>
+                <el-menu-item index="1-1">
+                  <router-link to="/Dep">部门管理</router-link>
+                </el-menu-item>
+                <el-menu-item index="1-2">
+                  <router-link to="/Emp">员工管理</router-link>
+                </el-menu-item>
               </el-menu-item-group>
               </el-submenu>
           </el-menu>

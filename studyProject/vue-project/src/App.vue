@@ -1,17 +1,15 @@
 <template>  <!--定义HTML模板 -->
   <div>
 <!--    <h1>{{message}}</h1>-->
-    <DepView>
-
-    </DepView>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-  import DepView from "@/views/Tlias/DepView.vue";
+  // import DepView from "@/views/Tlias/DepView.vue";
 
   export default {
-    components: {DepView},
+    components: {},
     data(){
       return{
         message:"Hello vue"

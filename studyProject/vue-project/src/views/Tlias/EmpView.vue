@@ -3,7 +3,7 @@ import axios from 'axios'
 export default {
     data(){
       return{
-        tabledata:[],
+        tableData:[],
         formInline: {
           name: '',
           gender: '',
@@ -24,7 +24,7 @@ export default {
     },
   mounted() {
     axios.get("https://yapi.pro/mock/450515/userGetByID").then((result)=>{
-      this.tabledata=result.data.data
+      this.tableData=result.data.data
     })
   }
 }
@@ -46,10 +46,14 @@ export default {
           <el-menu :default-openeds="['1', '3']">
             <el-submenu index="1">
               <template slot="title"><i class="el-icon-message"></i>系统信息管理</template>
-              <el-menu-item-group>
-                <el-menu-item index="1-1">部门管理</el-menu-item>
-                <el-menu-item index="1-2">员工管理</el-menu-item>
-              </el-menu-item-group>
+                <el-menu-item-group>
+                  <el-menu-item index="1-1">
+                    <router-link to="/Dep">部门管理</router-link>
+                  </el-menu-item>
+                  <el-menu-item index="1-2">
+                    <router-link to="/Emp">员工管理</router-link>
+                  </el-menu-item>
+                </el-menu-item-group>
               </el-submenu>
           </el-menu>
         </el-aside>
@@ -83,7 +87,7 @@ export default {
             </el-form>
 
             <!--        表格-->
-            <el-table :data="tabledata">
+            <el-table :data="tableData">
               <el-table-column prop="name" label="姓名" width="140"></el-table-column>
               <el-table-column prop="image" label="图像" width="120">
                 <template v-slot="slotProps">
